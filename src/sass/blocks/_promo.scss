@@ -1,0 +1,86 @@
+.promo {
+    padding: 3.13em 0 6.06em 0;
+    height: 1018px;
+    background-color: #fff;
+    background-image: url('./../../img/promo/Decore.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 538px -426px;
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        &__logo{
+            &-link {
+                width: 9.58%;
+                height: 3.33%;
+                position: relative;
+                transition: all 0.4s ease-in;
+                &:hover {      
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 13px;
+                        height: 13px;
+                        background: $main-color;
+                        position: absolute;
+                        top: 52%;
+                        left: 75px;
+                        border-radius: 50%;            
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 13px;
+                        height: 13px;
+                        background: $main-color;
+                        position: absolute;
+                        top: 52%;
+                        left: 98px;
+                        border-radius: 50%;            
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    &__list {
+        display: flex;
+        gap: 4.58%;
+        margin-bottom: 0;
+    }
+    &__link {
+        @include link-nav;
+    }
+    &__descr {
+        display: flex;
+        align-items: center;
+    }
+    &__click {
+        display: flex;
+        align-items: center;
+    }
+    &__login {
+        @include link-nav;
+        margin-right: 3.25em;
+    }
+    &__lang {
+        @include link-nav;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+            background-image: url('./../../icons/promo/vector.svg');
+            background-repeat: no-repeat;
+            width: 9px;
+            height: 4.5px;
+        }
+    }
+    }
+}
